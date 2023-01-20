@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <img src="shared/logo.svg" alt="Space Travel logo">
+        <img src="/shared/logo.svg" alt="Space Travel logo">
 
         <ul>
             <li><span>00</span> Home</li>
@@ -15,5 +15,5 @@
 import { RouterLink } from 'vue-router';
 
 </script>
-<style lang="scss" scoped src="../../assets/scss/navigation/navigation.scss" />
+<style lang="sass" scoped src="../../assets/scss/navigation/navigation.scss" />
 
