@@ -1,0 +1,41 @@
+@import "../colors/colors";
+
+* {
+  color: $primary-text-color;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+nav {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    gap: 48px;
+    padding-right: 165px;
+    padding-left: 123px;
+    background-color: $navBgColor;
+    backdrop-filter: $navBgFilter;
+    align-items: center;
+    li {
+      line-height: 19px;
+      letter-spacing: 2.700000047683716px;
+      cursor: pointer;
+      transition: .5s ease;
+      display: flex;
+      align-items: center;
+      min-height: 96px;
+      gap: .5rem;
+    }
+    li span {
+      font-weight: 700;
+    }
+
+    li:hover{
+       border-bottom: 1px solid red;
+    }
+  }
+}
