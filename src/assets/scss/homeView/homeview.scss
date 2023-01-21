@@ -1,1 +1,67 @@
-@import '../colors/colors';
+@import "../colors/colors";
+
+* {
+  color: $primary-text-color;
+}
+
+main {
+  margin: 200px auto 0 auto;
+  max-width: 1200px;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#text-content {
+  max-width: 445px;
+
+  h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 4.724999904632568px;
+  }
+
+  h2 {
+    font-size: 150px;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+
+#explore {
+  height: 274px;
+  width: 274px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-text-color;
+  cursor: pointer;
+  transition: 0.5s ease;
+  h1 {
+    color: rgba(11, 13, 23, 1);
+    font-family: "Bellefair", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 2px;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 15px 19px rgba(151, 151, 151, 0.38);
+    -moz-box-shadow: 0px 0px 15px 19px rgba(151, 151, 151, 0.38);
+    box-shadow: 0px 0px 15px 19px rgba(151, 151, 151, 0.38);
+  }
+}
