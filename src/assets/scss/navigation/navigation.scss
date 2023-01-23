@@ -7,7 +7,7 @@
 
 nav {
   // width: 90%;
-  max-width: 1360px;
+  max-width: 1440px;
   margin-top: 40px;
   margin-left: auto;
   padding-left: 2rem;
@@ -22,22 +22,37 @@ nav {
     background-color: $navBgColor;
     backdrop-filter: $navBgFilter;
     align-items: center;
+    position: relative;
+    &::after {
+      content: "";
+      width: 473px;
+      background-color: $primary-text-color;
+      height: 1px;
+      position: absolute;
+      left: -450px;
+    }
     li {
-      line-height: 19px;
-      letter-spacing: 2.700000047683716px;
       cursor: pointer;
-      transition: .5s ease;
-      display: flex;
-      align-items: center;
-      min-height: 96px;
-      gap: .5rem;
+      transition: 0.5s ease;
+      &.active {
+        border-bottom: 1px solid $primary-text-color;
+      }
     }
     li span {
       font-weight: 700;
     }
 
-    li:hover{
-       border-bottom: 1px solid $primary-text-color;
+    li:hover {
+      border-bottom: 1px solid $primary-text-color;
     }
   }
+}
+
+.clicable-area {
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  gap: 0.5rem;
+  line-height: 19px;
+  letter-spacing: 2.700000047683716px;
 }
