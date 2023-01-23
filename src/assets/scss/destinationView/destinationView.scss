@@ -48,7 +48,13 @@ main {
       text-align: left;
       color: #d0d6f9;
       padding-bottom: 12px;
-      border-bottom: 3px solid $primary-text-color;
+      &.active{
+        border-bottom: 3px solid $primary-text-color;
+      }
+
+      &:hover{ 
+        border-bottom: 3px solid $primary-text-color;
+      }
     }
   }
   h1 {
