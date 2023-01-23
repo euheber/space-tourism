@@ -10,10 +10,10 @@
 
     <section id="choose-destination">
       <ul>
-        <li @click="handleActiveClass = 'moon'" :class="[handleActiveClass === 'moon' ? 'active' : '']">Moon</li>
-        <li @click="handleActiveClass = 'mars'" :class="[handleActiveClass === 'mars' ? 'active' : '']">Mars</li>
-        <li @click="handleActiveClass = 'europa'" :class="[handleActiveClass === 'europa' ? 'active' : '']">Europa</li>
-        <li @click="handleActiveClass = 'titan'" :class="[handleActiveClass === 'titan' ? 'active' : '']">Titan</li>
+        <li @click="handleChosenPlanet('moon')" :class="[handleActiveClass === 'moon' ? 'active' : '']">Moon</li>
+        <li @click="handleChosenPlanet('mars')" :class="[handleActiveClass === 'mars' ? 'active' : '']">Mars</li>
+        <li @click="handleChosenPlanet('europa')" :class="[handleActiveClass === 'europa' ? 'active' : '']">Europa</li>
+        <li @click="handleChosenPlanet('titan')" :class="[handleActiveClass === 'titan' ? 'active' : '']">Titan</li>
       </ul>
 
       <h1>
@@ -41,18 +41,58 @@
 
 <script setup>
 import navigation from '../components/navigation/navigation.vue';
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
 let handleActiveClass = ref('moon');
 
+const handleChosenPlanet = (valor) => {
+  switch (valor) {
+    case 'moon':
+      handleActiveClass.value = valor
+      planets.value.planet = valor
+      planets.value.content = 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.'
+      planets.value.distance = '384,400 km'
+      planets.value.travelTime = '3 days'
+      planets.value.imgDir = '/destination/image-moon.png'
+      break;
+    case 'mars':
+      handleActiveClass.value = valor
+      planets.value.planet = valor
+      planets.value.content = 'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!'
+      planets.value.distance = '225 MIL. km'
+      planets.value.travelTime = '9 months'
+      planets.value.imgDir = '/destination/image-mars.png'
+      break;
+    case 'europa':
+      handleActiveClass.value = valor
+      planets.value.planet = valor
+      planets.value.content = 'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.'
+      planets.value.distance = '628 MIL. km'
+      planets.value.travelTime = '3 years'
+      planets.value.imgDir = '/destination/image-europa.png'
+      break;
+    case 'titan':
+      handleActiveClass.value = valor
+      planets.value.planet = valor
+      planets.value.content = 'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.'
+      planets.value.distance = '1.6 BIL. km'
+      planets.value.travelTime = '7 years'
+      planets.value.imgDir = '/destination/image-titan.png'
+      break;
+  }
+}
 
-let planets = {
+
+let planets = ref({
   planet: 'moon',
   content: 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
   imgDir: '/destination/image-moon.png',
   distance: '384,400 km',
   travelTime: '3 days'
-}
+})
+
+
+
 
 const body = document.querySelector('body')
 body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat center'
