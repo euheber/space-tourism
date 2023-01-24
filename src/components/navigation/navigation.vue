@@ -13,7 +13,7 @@
                     <span>01</span> Destination
                 </router-link>
             </li>
-            <li> <router-link to="/destination" class="clicable-area">
+            <li> <router-link to="/crew" class="clicable-area">
                     <span>02</span> Crew
                 </router-link>
             </li>
