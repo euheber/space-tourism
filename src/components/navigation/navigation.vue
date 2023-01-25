@@ -13,11 +13,12 @@
                     <span>01</span> Destination
                 </router-link>
             </li>
-            <li> <router-link to="/crew" class="clicable-area">
+            <li :class="[currentPathname === 'crew' ? 'active' : '']"> 
+                <router-link to="/crew" class="clicable-area">
                     <span>02</span> Crew
                 </router-link>
             </li>
-            <li>
+            <li :class="[currentPathname === 'technology' ? 'active' : '']">
                 <router-link to="/destination" class="clicable-area">
                     <span>03</span> Technology
                 </router-link>

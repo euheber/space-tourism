@@ -5,13 +5,13 @@
 }
 
 main {
-  margin-top: 76px;
   display: flex;
   justify-content: space-between;
 }
 
 #chosen-planet {
-  max-width: 500px;
+  max-width: 600px;
+  min-height: 500px;
   h1 {
     color: $primary-text-color;
     font-family: $barlow-condensed;
@@ -30,7 +30,7 @@ main {
 
   img {
     margin-top: 97px;
-    margin-left: 80px;
+    margin-left: 50px;
   }
 }
 
