@@ -5,7 +5,11 @@
   <main>
     <section id="chosen-planet">
       <h1><span>01</span> Pick your destination</h1>
-      <img :src="planets.imgDir" alt="Moon picture" loading="lazy">
+      <Transition name="custom-classes" enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut" mode="out-in">
+
+        <img :src="planets.imgDir" alt="Moon picture" loading="lazy" :key="planets.imgDir">
+      </Transition>
     </section>
 
     <section id="choose-destination">

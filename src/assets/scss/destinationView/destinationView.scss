@@ -8,10 +8,10 @@ main {
   margin-top: 76px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 #chosen-planet {
+  max-width: 500px;
   h1 {
     color: $primary-text-color;
     font-family: $barlow-condensed;
@@ -103,3 +103,4 @@ main {
     margin-top: 12px;
   }
 }
+
