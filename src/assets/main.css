@@ -1,25 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-    outline: none;
-    appearance: none;
-    box-sizing: border-box;
-    border: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box;
+  border: none;
 }
 
-
-body{
-    min-height: 100vh;
-    transition: background-image 2s ease-in-out;
-    animation-delay: 1s;
-    background-color: black;
+body {
+  min-height: 100vh;
+  transition: background-image .5s ease-in-out;
 }
 
-main{
-    margin:  76px auto 0 auto;
-    max-width: 1200px;
-    padding-bottom: 5rem;
-    padding-inline: 3rem;
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(destination/background-destination-desktop.jpg)
+    url(crew/background-crew-desktop.jpg) url(home/background-home-desktop.jpg);
+}
+
+main {
+  margin: 76px auto 0 auto;
+  max-width: 1200px;
+  padding-bottom: 5rem;
+  padding-inline: 3rem;
 }
