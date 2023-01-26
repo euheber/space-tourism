@@ -44,9 +44,8 @@
 </template>
 
 <script setup>
-import navigation from '../components/navigation/navigation.vue';
 import { ref, reactive } from 'vue';
-
+import navigation from '../components/navigation/navigation.vue';
 let handleActiveClass = ref('moon');
 
 const handleChosenPlanet = (valor) => {
