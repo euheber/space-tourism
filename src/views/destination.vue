@@ -5,8 +5,8 @@
   <main>
     <section id="chosen-planet">
       <h1><span>01</span> Pick your destination</h1>
-      <Transition name="custom-classes" enter-active-class="animate__animated animate__fadeIn"
-        leave-active-class="animate__animated animate__fadeOut" mode="out-in">
+      <Transition name="custom-classes" enter-active-class="animate__animated animate__fadeIn animate__faster "
+        leave-active-class="animate__animated animate__fadeOut animate__faster " mode="out-in">
 
         <img :src="planets.imgDir" alt="Moon picture" loading="lazy" :key="planets.imgDir">
       </Transition>
@@ -50,9 +50,9 @@ import { ref, reactive } from 'vue';
 let handleActiveClass = ref('moon');
 
 const handleChosenPlanet = (valor) => {
+  handleActiveClass.value = valor
   switch (valor) {
     case 'moon':
-      handleActiveClass.value = valor
       planets.value.planet = valor
       planets.value.content = 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.'
       planets.value.distance = '384,400 km'
@@ -60,7 +60,6 @@ const handleChosenPlanet = (valor) => {
       planets.value.imgDir = '/destination/image-moon.png'
       break;
     case 'mars':
-      handleActiveClass.value = valor
       planets.value.planet = valor
       planets.value.content = 'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!'
       planets.value.distance = '225 MIL. km'
@@ -68,7 +67,6 @@ const handleChosenPlanet = (valor) => {
       planets.value.imgDir = '/destination/image-mars.png'
       break;
     case 'europa':
-      handleActiveClass.value = valor
       planets.value.planet = valor
       planets.value.content = 'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.'
       planets.value.distance = '628 MIL. km'
@@ -76,7 +74,6 @@ const handleChosenPlanet = (valor) => {
       planets.value.imgDir = '/destination/image-europa.png'
       break;
     case 'titan':
-      handleActiveClass.value = valor
       planets.value.planet = valor
       planets.value.content = 'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.'
       planets.value.distance = '1.6 BIL. km'

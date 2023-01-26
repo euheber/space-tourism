@@ -12,7 +12,9 @@
 
 body{
     min-height: 100vh;
-    transition: .5s ease;
+    transition: background-image 2s ease-in-out;
+    animation-delay: 1s;
+    background-color: black;
 }
 
 main{
