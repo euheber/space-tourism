@@ -3,7 +3,7 @@
         <navigation />
     </header>
     <main>
-        <div id="text-content">
+        <section id="text-content">
             <h1>
                 SO, YOU WANT TO TRAVEL TO
             </h1>
@@ -15,11 +15,11 @@
                 kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
                 experience!
             </p>
-        </div>
+        </section>
 
-        <div id="explore">
+        <section id="explore">
             <h1>EXPLORE</h1>
-        </div>
+        </section>
     </main>
 </template>
 

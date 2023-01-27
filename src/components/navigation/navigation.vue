@@ -19,7 +19,7 @@
                 </router-link>
             </li>
             <li :class="[currentPathname === 'technology' ? 'active' : '']">
-                <router-link to="/destination" class="clicable-area">
+                <router-link to="/technology" class="clicable-area">
                     <span>03</span> Technology
                 </router-link>
             </li>

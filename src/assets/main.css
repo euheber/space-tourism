@@ -12,7 +12,7 @@
 body {
   min-height: 100vh;
   transition: background-image 1s ease-in-out;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 body::after {
@@ -22,7 +22,9 @@ body::after {
   overflow: hidden;
   z-index: -1;
   content: url(/destination/background-destination-desktop.jpg)
-    url(/crew/background-crew-desktop.jpg) url(/home/background-home-desktop.jpg);
+    url(/crew/background-crew-desktop.jpg)
+    url(/home/background-home-desktop.jpg)
+    url(/technology/background-technology-desktop.jpg);
 }
 
 main {
