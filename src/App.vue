@@ -1,4 +1,5 @@
 <template>
+  <navigation />
   <RouterView />
 </template>
 

@@ -1,8 +1,4 @@
 <template>
-    <header>
-        <navigation />
-    </header>
-
     <main id="tech">
         <section id="space-launch">
             <h1>
@@ -22,7 +18,7 @@
                     <span>THE TERMINOLOGY…</span>
                     <h2>{{ terminologyContent.title }}</h2>
                     <p>
-                     {{ terminologyContent.content }}
+                        {{ terminologyContent.content }}
                     </p>
                 </div>
             </section>
@@ -74,6 +70,10 @@ const body = document.querySelector('body')
 body.style.background = 'url(technology/background-technology-desktop.jpg) no-repeat center'
 body.style.backgroundSize = 'cover'
 </script>
+
+
+
+
 
 
 

@@ -1,7 +1,4 @@
 <template>
-    <header>
-        <navigation />
-    </header>
     <main>
         <section id="text-content">
             <h1>

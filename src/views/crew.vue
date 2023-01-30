@@ -1,7 +1,4 @@
 <template>
-   <header>
-      <navigation />
-   </header>
    <main>
       <section id="crew-info">
          <section id="meet-your-crew">

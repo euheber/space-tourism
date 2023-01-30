@@ -13,7 +13,7 @@
                     <span>01</span> Destination
                 </router-link>
             </li>
-            <li :class="[currentPathname === 'crew' ? 'active' : '']"> 
+            <li :class="[currentPathname === 'crew' ? 'active' : '']">
                 <router-link to="/crew" class="clicable-area">
                     <span>02</span> Crew
                 </router-link>
@@ -29,11 +29,18 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
+import { watchEffect } from 'vue'
+import { ref } from 'vue';
+const router = useRoute()
 
-const router = useRouter()
+let currentPathname =  ref('home')
 
-let currentPathname = router.currentRoute.value.name;
+watchEffect(() => {
+    currentPathname.value = router.name
+})
+
+
 
 </script>
 <style lang="sass" scoped src="../../assets/scss/navigation/navigation.scss" />

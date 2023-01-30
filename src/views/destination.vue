@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <navigation />
-  </header>
   <main>
     <section id="chosen-planet">
       <h1><span>01</span> Pick your destination</h1>
