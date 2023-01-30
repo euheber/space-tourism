@@ -22,10 +22,37 @@
 
 <script setup>
 import navigation from '../components/navigation/navigation.vue';
-const body = document.querySelector('body')
+import { ref, watch } from 'vue';
+const body = document.querySelector('body');
 body.style.background = 'url(home/background-home-desktop.jpg) no-repeat center'
 body.style.backgroundSize = 'cover'
+
+const handleBg = () => {
+    let windowWidth = window.innerWidth;
+    if (windowWidth >= 1024) {
+        body.style.background = 'url(home/background-home-desktop.jpg) no-repeat'
+        body.style.backgroundSize = 'cover'
+        body.style.imageRendering = 'pixelated'
+    } else if (windowWidth >= 768) {
+        body.style.background = 'url(home/background-home-tablet.jpg) no-repeat center'
+        body.style.backgroundSize = 'cover'
+    }
+}
+
+window.addEventListener('resize', handleBg)
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

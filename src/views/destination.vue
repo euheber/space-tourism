@@ -89,8 +89,6 @@ let planets = ref({
 })
 
 
-
-
 const body = document.querySelector('body')
 body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat center'
 body.style.backgroundSize = 'cover'
