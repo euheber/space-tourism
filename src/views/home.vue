@@ -23,16 +23,35 @@
 <script setup>
 import navigation from '../components/navigation/navigation.vue';
 import { ref, watch } from 'vue';
-const body = document.querySelector('body');
-body.style.background = 'url(home/background-home-desktop.jpg) no-repeat center'
-body.style.backgroundSize = 'cover'
+const body = document.querySelector('body')
+
+
+
+if (window.innerWidth >= 1024) {
+    body.style.background = 'url(home/background-home-desktop.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+    console.log('cheguei aqui 1024')
+}
+
+if(window.innerWidth <= 768 && window.innerWidth > 425){
+    body.style.background = 'url(home/background-home-tablet.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+    console.log('cheguei aqui 768')
+}
+
+if(window.innerWidth <= 425){
+    body.style.background = 'url(home/background-home-mobile.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+    console.log('cheguei aqui 425')
+}
+
+
 
 const handleBg = () => {
     let windowWidth = window.innerWidth;
     if (windowWidth >= 1024) {
         body.style.background = 'url(home/background-home-desktop.jpg) no-repeat'
         body.style.backgroundSize = 'cover'
-        body.style.imageRendering = 'pixelated'
     } else if (windowWidth >= 768) {
         body.style.background = 'url(home/background-home-tablet.jpg) no-repeat center'
         body.style.backgroundSize = 'cover'
@@ -41,6 +60,32 @@ const handleBg = () => {
 
 window.addEventListener('resize', handleBg)
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
