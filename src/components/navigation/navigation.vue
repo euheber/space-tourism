@@ -2,7 +2,7 @@
     <nav>
         <img src="/shared/logo.svg" alt="Space Travel logo">
 
-        <ul>
+        <ul id="desktop-tablet-navigation">
             <li :class="[currentPathname === 'home' ? 'active' : '']">
                 <router-link to="/" class="clicable-area">
                     <span>00</span> Home
@@ -24,6 +24,35 @@
                 </router-link>
             </li>
         </ul>
+
+        <button id="mobile-menu-btn">
+            <img src="/shared/icon-hamburger.svg" alt="Abrir menu" v-if="handleBtn" @click="handleMobileMenu" >
+            <img src="/shared/icon-close.svg" alt="Fechar menu" v-else @click="handleMobileMenu" >
+        </button>
+
+        <ul id="mobile-navigation" v-if="mobileMenu">
+            <li :class="[currentPathname === 'home' ? 'active' : '']">
+                <router-link to="/" class="mobile-clicable-area">
+                    <span>00</span> Home
+                </router-link>
+            </li>
+            <li :class="[currentPathname === 'destination' ? 'active' : '']">
+                <router-link to="/destination" class="mobile-clicable-area">
+                    <span>01</span> Destination
+                </router-link>
+            </li>
+            <li :class="[currentPathname === 'crew' ? 'active' : '']">
+                <router-link to="/crew" class="mobile-clicable-area">
+                    <span>02</span> Crew
+                </router-link>
+            </li>
+            <li :class="[currentPathname === 'technology' ? 'active' : '']">
+                <router-link to="/technology" class="mobile-clicable-area">
+                    <span>03</span> Technology
+                </router-link>
+            </li>
+        </ul>
+
     </nav>
 </template>
 
@@ -34,8 +63,15 @@ import { watchEffect } from 'vue'
 import { ref } from 'vue';
 const router = useRoute()
 
-let currentPathname =  ref('home')
+let currentPathname = ref('home')
 
+let handleBtn = ref(true)
+let mobileMenu = ref(false)
+
+const handleMobileMenu = () => { 
+    handleBtn.value = !handleBtn.value
+    mobileMenu.value = !mobileMenu.value
+}
 watchEffect(() => {
     currentPathname.value = router.name
 })

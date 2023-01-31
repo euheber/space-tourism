@@ -14,10 +14,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     margin-top: 0;
   }
-  ul {
+  @media (max-width: 425px) {
+    margin-top: 1rem;
+  }
+  #desktop-tablet-navigation {
     display: flex;
     gap: 48px;
     padding-right: 165px;
@@ -33,7 +36,7 @@ nav {
       height: 1px;
       position: absolute;
       left: -450px;
-      @media( max-width: 768px){
+      @media (max-width: 768px) {
         display: none;
       }
     }
@@ -52,11 +55,40 @@ nav {
       border-bottom: 1px solid $primary-text-color;
     }
 
-    @media( max-width: 768px){
+    @media (max-width: 768px) {
       padding-right: 10px;
       padding-left: 15px;
     }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
+
+  #mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    width: 254px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    padding-inline: 32px;
+    li span {
+      font-weight: 700;
+    }
+  }
+}
+
+#mobile-menu-btn {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-right: 33px;
 }
 
 .clicable-area {
@@ -66,4 +98,10 @@ nav {
   gap: 0.5rem;
   line-height: 19px;
   letter-spacing: 2.700000047683716px;
+}
+
+.mobile-clicable-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

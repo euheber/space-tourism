@@ -11,25 +11,40 @@ main {
   margin-top: 200px;
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 2rem;
+    gap: 32px;
+  }
+
+  @media (max-width: 425px) {
+    padding-inline: 0;
+    margin-top: 48px;
+    gap: 81px;
   }
 }
 
 #text-content {
   max-width: 445px;
 
+  @media (max-width: 425px) {
+   padding-inline: 1rem;
+  }
   h1 {
     font-family: "Barlow Condensed", sans-serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 34px;
     letter-spacing: 4.724999904632568px;
+    @media (max-width: 425px) {
+      font-size: 16px;
+    }
   }
 
   h2 {
     font-size: 150px;
     font-family: "Bellefair", serif;
     font-weight: 400;
+    @media (max-width: 425px) {
+      font-size: 80px;
+    }
   }
 
   p {
@@ -39,6 +54,9 @@ main {
     line-height: 32px;
     letter-spacing: 0px;
     text-align: left;
+    @media (max-width: 425px) {
+      font-size: 15;
+    }
   }
 
   @media (max-width: 768px) {
@@ -60,6 +78,11 @@ main {
   background-color: $primary-text-color;
   cursor: pointer;
   transition: 0.5s ease;
+
+  @media (max-width: 425px) {
+    height: 150px;
+    width: 150px;
+  }
   h1 {
     color: rgba(11, 13, 23, 1);
     font-family: "Bellefair", serif;
@@ -67,6 +90,9 @@ main {
     font-weight: 400;
     line-height: 37px;
     letter-spacing: 2px;
+    @media (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 
   &:hover {
