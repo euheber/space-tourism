@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav v-click-outside="onClickOutside">
         <img src="/shared/logo.svg" alt="Space Travel logo">
 
         <ul id="desktop-tablet-navigation">
@@ -27,10 +27,10 @@
 
         <button id="mobile-menu-btn">
             <img src="/shared/icon-hamburger.svg" alt="Abrir menu" v-if="handleBtn" @click="handleMobileMenu">
-            <img src="/shared/icon-close.svg" alt="Fechar menu" v-else @click="handleMobileMenu">
+            <img src="/shared/icon-close.svg" alt="Fechar menu" v-else @click="handleMobileMenu" >
         </button>
 
-        <ul id="mobile-navigation" v-if="mobileMenu">
+        <ul id="mobile-navigation" v-show="mobileMenu">
             <li :class="[currentPathname === 'home' ? 'active' : '']">
                 <router-link to="/" class="mobile-clicable-area" @click="handleMobileMenu">
                     <span>00</span> Home
@@ -67,6 +67,18 @@ let currentPathname = ref('home')
 let handleBtn = ref(true)
 let mobileMenu = ref(false)
 
+const onClickOutside = () => {
+    if (mobileMenu.value) {
+        handleBtn.value = true
+        mobileMenu.value =  false
+    }
+
+    if (mobileMenu.value) {
+        body.style.overflow = 'hidden'
+    } else {
+        body.style.overflow = 'scroll '
+    }
+}
 
 const handleMobileMenu = () => {
     handleBtn.value = !handleBtn.value
