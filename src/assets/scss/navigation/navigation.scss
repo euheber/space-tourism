@@ -4,7 +4,6 @@
   color: $primary-text-color;
   font-family: "Barlow Condensed", sans-serif;
 }
-
 nav {
   // width: 90%;
   max-width: 1440px;
@@ -89,6 +88,10 @@ nav {
   position: relative;
   z-index: 1;
   margin-right: 33px;
+
+  @media(min-width: 768px){ 
+    display: none;
+  }
 }
 
 .clicable-area {
