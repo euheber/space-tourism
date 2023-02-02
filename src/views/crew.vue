@@ -1,11 +1,10 @@
 <template>
    <main>
+      <div id="meet-your-crew">
+      <h1><span>02</span> Meet your crew</h1>
+   </div>
       <section id="crew-info">
-         <section id="meet-your-crew">
-            <h1><span>02</span> Meet your crew</h1>
-         </section>
-
-         <section id="crew-member">
+         <div id="crew-member">
             <h1> {{ crewMate.title }}</h1>
 
             <h2> {{ crewMate.name }}</h2>
@@ -13,7 +12,7 @@
             <p>
                {{ crewMate.content }}
             </p>
-         </section>
+         </div>
 
          <section id="change-crewmate">
             <button class="btn" :class="[handleActiveBtn === 'commander' ? 'active' : '']"
@@ -52,13 +51,13 @@ const handleCrewMate = (valor) => {
          crewMate.value.title = 'commander'
          crewMate.value.name = 'Douglas Hurley'
          crewMate.value.content = ' Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2',
-         crewMate.value.imgDir = '/crew/image-douglas-hurley.png'
+            crewMate.value.imgDir = '/crew/image-douglas-hurley.png'
          break;
       case 'specialist':
          crewMate.value.title = 'Mission Specialist '
          crewMate.value.name = 'MARK SHUTTLEWORTH'
          crewMate.value.content = 'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.',
-         crewMate.value.imgDir = '/crew/image-mark-shuttleworth.png'
+            crewMate.value.imgDir = '/crew/image-mark-shuttleworth.png'
          break;
       case 'pilot':
          crewMate.value.title = 'Pilot'
