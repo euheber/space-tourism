@@ -30,19 +30,16 @@ const body = document.querySelector('body')
 if (window.innerWidth >= 1024) {
     body.style.background = 'url(home/background-home-desktop.jpg) no-repeat center'
     body.style.backgroundSize = 'cover'
-    console.log('cheguei aqui 1024')
 }
 
-if(window.innerWidth <= 768 && window.innerWidth > 425){
+if (window.innerWidth > 425 && window.innerWidth < 1024) {
     body.style.background = 'url(home/background-home-tablet.jpg) no-repeat center'
     body.style.backgroundSize = 'cover'
-    console.log('cheguei aqui 768')
 }
 
-if(window.innerWidth <= 425){
+if (window.innerWidth <= 425) {
     body.style.background = 'url(home/background-home-mobile.jpg) no-repeat center'
     body.style.backgroundSize = 'cover'
-    console.log('cheguei aqui 425')
 }
 
 
@@ -52,14 +49,21 @@ const handleBg = () => {
     if (windowWidth >= 1024) {
         body.style.background = 'url(home/background-home-desktop.jpg) no-repeat'
         body.style.backgroundSize = 'cover'
-    } else if (windowWidth >= 768) {
+    } else if (windowWidth > 425) {
         body.style.background = 'url(home/background-home-tablet.jpg) no-repeat center'
+        body.style.backgroundSize = 'cover'
+    } else if (window.innerWidth <= 425) {
+        body.style.background = 'url(home/background-home-mobile.jpg) no-repeat center'
         body.style.backgroundSize = 'cover'
     }
 }
 
 window.addEventListener('resize', handleBg)
 </script>
+
+
+
+
 
 
 

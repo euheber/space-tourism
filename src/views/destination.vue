@@ -88,10 +88,45 @@ let planets = ref({
   travelTime: '3 days'
 })
 
-
 const body = document.querySelector('body')
-body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat center'
-body.style.backgroundSize = 'cover'
+// body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat center'
+// body.style.backgroundSize = 'cover'
+
+
+
+if (window.innerWidth >= 1024) {
+  body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+if (window.innerWidth > 425 && window.innerWidth < 1024) {
+  body.style.background = 'url(destination/background-destination-tablet.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+if (window.innerWidth <= 425) {
+  body.style.background = 'url(destination/background-destination-mobile.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+
+
+const handleBg = () => {
+  let windowWidth = window.innerWidth;
+  if (windowWidth >= 1024) {
+    body.style.background = 'url(destination/background-destination-desktop.jpg) no-repeat'
+    body.style.backgroundSize = 'cover'
+  } else if (windowWidth > 425) {
+    body.style.background = 'url(destination/background-destination-tablet.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+  } else if (window.innerWidth <= 425) {
+    body.style.background = 'url(destination/background-destination-mobile.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+  }
+}
+
+window.addEventListener('resize', handleBg)
+
 </script>
 
 <style  lang="sass" scoped src="../assets/scss/destinationView/destinationView.scss" />

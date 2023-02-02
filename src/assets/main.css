@@ -15,6 +15,16 @@ body {
   animation-delay: 0.5s;
 }
 
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+
 body::after {
   position: absolute;
   width: 0;

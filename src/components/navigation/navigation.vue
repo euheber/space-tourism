@@ -74,9 +74,9 @@ const onClickOutside = () => {
     }
 
     if (mobileMenu.value) {
-        body.style.overflow = 'hidden'
+        body.style.overflowY = 'hidden'
     } else {
-        body.style.overflow = 'scroll '
+        body.style.overflow = 'auto'
     }
 }
 
@@ -85,16 +85,15 @@ const handleMobileMenu = () => {
     mobileMenu.value = !mobileMenu.value
 
     if (mobileMenu.value) {
-        body.style.overflow = 'hidden'
+        body.style.overflowY = 'hidden'
     } else {
-        body.style.overflow = 'scroll '
+        body.style.overflow = 'auto'
     }
 }
 
 watchEffect(() => {
     currentPathname.value = router.name
 })
-
 
 
 </script>
