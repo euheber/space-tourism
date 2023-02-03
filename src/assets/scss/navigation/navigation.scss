@@ -77,6 +77,7 @@ nav {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
     padding-inline: 32px;
+    z-index: 2;
     li span {
       font-weight: 700;
     }
@@ -86,7 +87,7 @@ nav {
 #mobile-menu-btn {
   background-color: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 99;
   margin-right: 33px;
   @media(min-width: 426px){ 
     display: none;

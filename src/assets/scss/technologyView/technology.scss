@@ -2,16 +2,25 @@
 @import "../fonts/fonts";
 
 main {
-//   border: 1px solid yellow;
-  margin-right: 0;
-  max-width: 1300px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+  width: 100%;
+  @media (max-width: 768px) {
+    padding-inline: 0;
+  }
 }
 
-#space-launch {
-  max-width: 630px;
+#flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  max-width: 1300px;
+  gap: 2rem;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+#tech-title {
   h1 {
     color: $primary-text-color;
     font-family: $barlow-condensed;
@@ -20,20 +29,37 @@ main {
     letter-spacing: 4.725px;
     text-transform: uppercase;
     font-weight: 400;
-    margin-bottom: 137px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    @media (max-width: 426px) {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      text-align: center;
+    }
     span {
       color: #ffffff;
       mix-blend-mode: normal;
       opacity: 0.25;
       font-family: $barlow-condensed;
       margin-right: 28px;
+      @media (max-width: 426px) {
+        margin-right: 16px;
+      }
     }
   }
+}
+
+#space-launch {
+  max-width: 630px;
 }
 
 #select-travel-info {
   display: flex;
   gap: 80px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .btns {
   display: flex;
@@ -53,20 +79,35 @@ main {
     letter-spacing: 2px;
     text-align: center;
     color: $primary-text-color;
-    transition: .5s ease;
-    &:hover{
-        background-color: $primary-text-color;
-        color: black;
+    transition: 0.5s ease;
+    &:hover {
+      background-color: $primary-text-color;
+      color: black;
     }
 
-    &.active{ 
-        background-color: $primary-text-color;
-        color: black;
+    &.active {
+      background-color: $primary-text-color;
+      color: black;
     }
+    @media (max-width: 426px) {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: row;
+    margin: 0 auto;
   }
 }
 
 .text-content {
+  @media(max-width: 768px){
+    padding-inline: 1rem;
+  }
   span {
     font-family: $barlow-condensed;
     color: rgba(208, 214, 249, 1);
@@ -75,6 +116,13 @@ main {
     line-height: 19px;
     letter-spacing: 2.700000047683716px;
     text-align: left;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      display: block;
+      text-align: center;
+    }
   }
   h2 {
     font-family: $Bellefair;
@@ -86,6 +134,11 @@ main {
     color: $primary-text-color;
     margin-bottom: 14px;
     margin-top: 11px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+    }
   }
 
   p {
@@ -96,5 +149,20 @@ main {
     letter-spacing: 0px;
     text-align: left;
     color: rgba(208, 214, 249, 1);
+    @media (max-width: 768px) {
+      font-size: 15px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+}
+
+#img {
+  order: 1;
+  img {
+    max-width: 100%;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 34px;
   }
 }
