@@ -1,8 +1,8 @@
 <template>
+     <div id="meet-your-crew">
+         <h1><span>02</span> Meet your crew</h1>
+      </div>
    <main>
-      <div id="meet-your-crew">
-      <h1><span>02</span> Meet your crew</h1>
-   </div>
       <section id="crew-info">
          <div id="crew-member">
             <h1> {{ crewMate.title }}</h1>
@@ -36,11 +36,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import navigation from '../components/navigation/navigation.vue';
 const body = document.querySelector('body')
-body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat center'
-body.style.backgroundSize = 'cover'
-
 let handleActiveBtn = ref('commander')
 
 
@@ -80,6 +76,40 @@ let crewMate = ref({
    content: ' Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2',
    imgDir: '/crew/image-douglas-hurley.png'
 })
+
+
+if (window.innerWidth >= 1024) {
+  body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+if (window.innerWidth > 425 && window.innerWidth < 1024) {
+  body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+if (window.innerWidth <= 425) {
+  body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
+  body.style.backgroundSize = 'cover'
+}
+
+
+
+const handleBg = () => {
+  let windowWidth = window.innerWidth;
+  if (windowWidth >= 1024) {
+    body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat'
+    body.style.backgroundSize = 'cover'
+  } else if (windowWidth > 425) {
+    body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+  } else if (window.innerWidth <= 425) {
+    body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
+    body.style.backgroundSize = 'cover'
+  }
+}
+
+window.addEventListener('resize', handleBg)
 </script>
 
 <style lang="sasss" scoped src="../assets/scss/crewView/crewView.scss" />
