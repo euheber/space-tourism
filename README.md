@@ -1,29 +1,21 @@
-# .
+<h1 align="center">
+  <img src=".github/logo.svg" height="60px" />
+</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">
+  <img src=".github/home.png" width="100%" />
+</p>
 
-## Recommended IDE Setup
+## 💻 Projeto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Esse projeto é um desafio tirado do site  [**Frontend Mentor**](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). 
+O site possui quatro páginas diferentes e para atingir o objetivo foi usado vue Router para troca dinamica de rotas entre cada uma delas.
 
-## Customize configuration
+## 🚀 Tecnologias
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Vue JS](https://vuejs.org/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [SASS](https://sass-lang.com/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
