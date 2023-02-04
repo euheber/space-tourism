@@ -29,11 +29,17 @@ main {
     letter-spacing: 4.725px;
     text-transform: uppercase;
     font-weight: 400;
-    @media (max-width: 768px) {
+    @media (max-width: 426px) {
       font-size: 16px;
       line-height: 19px;
       letter-spacing: 2.7px;
       text-transform: uppercase;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
+      text-align: left;
     }
     span {
       color: #ffffff;
@@ -47,23 +53,31 @@ main {
   img {
     margin-top: 97px;
     margin-left: 50px;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
     @media (max-width: 426px) {
       width: 170px;
       height: 170px;
       margin-top: 32px;
-      margin-left: 0;
     }
   }
 }
 
 #choose-destination {
   max-width: 445px;
-
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
   ul {
     display: flex;
     gap: 35px;
-    justify-content: center;
     margin-bottom: 37px;
+    @media (max-width: 768px) {
+      justify-content: center;
+      border: 1px solid red;
+    }
     li {
       cursor: pointer;
       font-family: $barlow-condensed;
@@ -95,6 +109,11 @@ main {
       line-height: 64px;
       text-align: center;
     }
+    @media (max-width: 768px) {
+      font-size: 80px;
+      line-height: 92px;
+      text-align: center;
+    }
   }
 
   p.planet-info {
@@ -113,6 +132,11 @@ main {
       text-align: center;
       padding-bottom: 32px;
     }
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+    }
   }
 }
 
@@ -122,6 +146,9 @@ main {
   @media (max-width: 425px) {
     flex-direction: column;
     gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 
   p {

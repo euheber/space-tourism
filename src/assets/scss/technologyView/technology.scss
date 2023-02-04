@@ -31,6 +31,12 @@ main {
     font-weight: 400;
     margin-top: 24px;
     margin-bottom: 32px;
+    @media (max-width: 768px) {
+      margin-left: 38px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
+    }
     @media (max-width: 426px) {
       font-size: 16px;
       line-height: 19px;
@@ -89,6 +95,14 @@ main {
       background-color: $primary-text-color;
       color: black;
     }
+    @media (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
     @media (max-width: 426px) {
       width: 40px;
       height: 40px;
@@ -105,7 +119,7 @@ main {
 }
 
 .text-content {
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     padding-inline: 1rem;
   }
   span {
@@ -117,11 +131,16 @@ main {
     letter-spacing: 2.700000047683716px;
     text-align: left;
     @media (max-width: 768px) {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+    }
+    @media (max-width: 426px) {
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 2.3625px;
-      display: block;
-      text-align: center;
     }
   }
   h2 {
@@ -135,9 +154,13 @@ main {
     margin-bottom: 14px;
     margin-top: 11px;
     @media (max-width: 768px) {
+      font-size: 40px;
+      line-height: 46px;
+      text-align: center;
+    }
+    @media (max-width: 426px) {
       font-size: 24px;
       line-height: 28px;
-      text-align: center;
     }
   }
 
@@ -150,6 +173,12 @@ main {
     text-align: left;
     color: rgba(208, 214, 249, 1);
     @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      text-align: center;
+    }
+    @media (max-width: 426px) {
       font-size: 15px;
       line-height: 25px;
       text-align: center;

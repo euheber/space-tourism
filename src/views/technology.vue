@@ -67,7 +67,7 @@ let terminologyContent = ref({
     title: 'LAUNCH VEHICLE',
     content: `
     A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`,
-    imgDir: '/technology/image-launch-vehicle-portrait.jpg'
+    imgDir: window.innerWidth <= 768 ? '/technology/image-launch-vehicle-landscape.jpg' : '/technology/image-launch-vehicle-portrait.jpg'
 })
 const body = document.querySelector('body')
 body.style.background = 'url(technology/background-technology-desktop.jpg) no-repeat center'

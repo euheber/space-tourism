@@ -1,13 +1,16 @@
 @import "../colors/colors";
 @import "../fonts/fonts";
 
-main {
+#flex-box {
   display: flex;
   align-items: center;
   padding: 0;
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding-inline: 24px;
+  }
+  @media (max-width: 426px) {
+    flex-direction: column-reverse;
   }
 }
 
@@ -15,13 +18,15 @@ main {
   max-width: 614px;
   @media (max-width: 768px) {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 #meet-your-crew {
-  margin-top: 76px;
-  @media (max-width: 426px) {
+  margin: 76px auto 0 auto;
+  max-width: 1300px;
+  @media (max-width: 768px) {
     margin-bottom: 32px;
     margin-top: 24px;
     display: flex;
@@ -35,12 +40,17 @@ main {
     letter-spacing: 4.725px;
     text-transform: uppercase;
     font-weight: 400;
-    margin-left: 166px;
+    // margin-left: 166px;
     @media (max-width: 426px) {
       font-size: 16px;
       line-height: 19px;
       letter-spacing: 2.7px;
       margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
     }
     span {
       color: #ffffff;
@@ -97,6 +107,9 @@ main {
       font-size: 15px;
       line-height: 25px;
     }
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -119,8 +132,8 @@ main {
 
 #change-crewmate {
   @media (max-width: 768px) {
-    margin-block: 32px;
     text-align: center;
+    margin-bottom: 40px;
   }
 }
 

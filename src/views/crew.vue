@@ -1,34 +1,36 @@
 <template>
-     <div id="meet-your-crew">
+   <main>
+      <div id="meet-your-crew">
          <h1><span>02</span> Meet your crew</h1>
       </div>
-   <main>
-      <section id="crew-info">
-         <div id="crew-member">
-            <h1> {{ crewMate.title }}</h1>
+      <section id="flex-box">
+         <section id="crew-info">
+            <div id="crew-member">
+               <h1> {{ crewMate.title }}</h1>
 
-            <h2> {{ crewMate.name }}</h2>
+               <h2> {{ crewMate.name }}</h2>
 
-            <p>
-               {{ crewMate.content }}
-            </p>
-         </div>
+               <p>
+                  {{ crewMate.content }}
+               </p>
+            </div>
 
-         <section id="change-crewmate">
-            <button class="btn" :class="[handleActiveBtn === 'commander' ? 'active' : '']"
-               @click="handleCrewMate('commander')"></button>
-            <button class="btn" :class="[handleActiveBtn === 'specialist' ? 'active' : '']"
-               @click="handleCrewMate('specialist')"></button>
-            <button class="btn" :class="[handleActiveBtn === 'pilot' ? 'active' : '']"
-               @click="handleCrewMate('pilot')"></button>
-            <button class="btn" :class="[handleActiveBtn === 'engineer' ? 'active' : '']"
-               @click="handleCrewMate('engineer')"></button>
+            <section id="change-crewmate">
+               <button class="btn" :class="[handleActiveBtn === 'commander' ? 'active' : '']"
+                  @click="handleCrewMate('commander')"></button>
+               <button class="btn" :class="[handleActiveBtn === 'specialist' ? 'active' : '']"
+                  @click="handleCrewMate('specialist')"></button>
+               <button class="btn" :class="[handleActiveBtn === 'pilot' ? 'active' : '']"
+                  @click="handleCrewMate('pilot')"></button>
+               <button class="btn" :class="[handleActiveBtn === 'engineer' ? 'active' : '']"
+                  @click="handleCrewMate('engineer')"></button>
+            </section>
+
          </section>
 
-      </section>
-
-      <section id="profile-picture">
-         <img :src="crewMate.imgDir" :alt="crewMate.name">
+         <section id="profile-picture">
+            <img :src="crewMate.imgDir" :alt="crewMate.name">
+         </section>
       </section>
    </main>
 
@@ -79,34 +81,34 @@ let crewMate = ref({
 
 
 if (window.innerWidth >= 1024) {
-  body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat center'
-  body.style.backgroundSize = 'cover'
+   body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat center'
+   body.style.backgroundSize = 'cover'
 }
 
 if (window.innerWidth > 425 && window.innerWidth < 1024) {
-  body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
-  body.style.backgroundSize = 'cover'
+   body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
+   body.style.backgroundSize = 'cover'
 }
 
 if (window.innerWidth <= 425) {
-  body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
-  body.style.backgroundSize = 'cover'
+   body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
+   body.style.backgroundSize = 'cover'
 }
 
 
 
 const handleBg = () => {
-  let windowWidth = window.innerWidth;
-  if (windowWidth >= 1024) {
-    body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat'
-    body.style.backgroundSize = 'cover'
-  } else if (windowWidth > 425) {
-    body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
-    body.style.backgroundSize = 'cover'
-  } else if (window.innerWidth <= 425) {
-    body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
-    body.style.backgroundSize = 'cover'
-  }
+   let windowWidth = window.innerWidth;
+   if (windowWidth >= 1024) {
+      body.style.background = 'url(crew/background-crew-desktop.jpg) no-repeat'
+      body.style.backgroundSize = 'cover'
+   } else if (windowWidth > 425) {
+      body.style.background = 'url(crew/background-crew-tablet.jpg) no-repeat center'
+      body.style.backgroundSize = 'cover'
+   } else if (window.innerWidth <= 425) {
+      body.style.background = 'url(crew/background-crew-mobile.jpg) no-repeat center'
+      body.style.backgroundSize = 'cover'
+   }
 }
 
 window.addEventListener('resize', handleBg)
